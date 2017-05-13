@@ -1,0 +1,26 @@
+= Apache Arrow
+
+: author
+   須藤功平
+: institution
+   クリアコード
+: content-source
+   データ分析用次世代データフォーマットApache Arrow勉強会
+: date
+   2017-05-28
+: allotted-time
+   60m
+: theme
+   clear-code
+
+= 最初のスライド
+
+  * 項目1
+  * 項目2
+  * 項目3
+
+= 二番目のスライド
+
+  # image
+  # src = https://raw.github.com/rabbit-shocker/rabbit/master/sample/lavie.png
+  # relative_height = 100
