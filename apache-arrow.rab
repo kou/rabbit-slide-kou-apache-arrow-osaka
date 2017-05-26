@@ -13,14 +13,23 @@
 : theme
    clear-code
 
-= 最初のスライド
+= 流れ
 
-  * 項目1
-  * 項目2
-  * 項目3
+  (1) Apache Arrowの概要を知る
+  (2) Apache Arrowの詳細を知る
 
-= 二番目のスライド
+= 概要
 
-  # image
-  # src = https://raw.github.com/rabbit-shocker/rabbit/master/sample/lavie.png
-  # relative_height = 100
+DataScience.rbワークショップ\n
+の資料で紹介
+
+  * RubyもApache Arrowで\n
+    データ処理言語の仲間入り\n
+    (('tag:small:https://slide.rabbit-shocker.org/authors/kou/data-science-rb/'))
+
+= 詳細
+
+  * 最新情報はWes McKinneyさんのスライドを見るのがよい
+    * https://www.slideshare.net/wesm/
+  * https://www.slideshare.net/wesm/memory-interoperability-in-analytics-and-machine-learning
+  * https://www.slideshare.net/wesm/apache-arrow-stratahadoop-world-san-jose-2016-60349194
