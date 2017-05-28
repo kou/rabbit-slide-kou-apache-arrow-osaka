@@ -13,10 +13,17 @@
 : theme
    clear-code
 
+= ハッシュタグ
+
+(('#osaka_arrow'))\n
+(('note:今日はいろんなURLを参照するのでそれらを共有したい'))
+
 = 流れ
 
   (1) Apache Arrowの概要を知る
   (2) Apache Arrowの詳細を知る
+  (3) Apache Arrow関連の開発に\n
+      参加する方法を知る
 
 = 概要
 
@@ -31,5 +38,120 @@ DataScience.rbワークショップ\n
 
   * 最新情報はWes McKinneyさんのスライドを見るのがよい
     * https://www.slideshare.net/wesm/
-  * https://www.slideshare.net/wesm/memory-interoperability-in-analytics-and-machine-learning
-  * https://www.slideshare.net/wesm/apache-arrow-stratahadoop-world-san-jose-2016-60349194
+  * 例：
+    * (('tag:xx-small'))
+      https://www.slideshare.net/wesm/memory-interoperability-in-analytics-and-machine-learning
+    * (('tag:xx-small'))
+      https://www.slideshare.net/wesm/nextgeneration-python-big-data-tools-powered-by-apache-arrow
+
+= 紹介
+
+  * (('tag:xx-small:https://www.slideshare.net/MapR_Japan/apache-arrow-value-vectors-tokyo-apache-drill-meetup-20160322'))
+  * (('tag:xx-small:https://www.slideshare.net/wesm/nextgeneration-python-big-data-tools-powered-by-apache-arrow'))
+  * (('tag:xx-small:https://www.slideshare.net/wesm/memory-interoperability-in-analytics-and-machine-learning'))
+
+= 開発に参加
+
+  * Apache Arrowの旨味がでる状態
+    * みんながApache Arrowを使う
+  * 早く↑の状態にするには
+    * Apache Arrow関連の開発に参加！\n
+      (('note:待っていることもできるけど一緒にやろうよ！'))
+
+= Apache Arrowの開発に参加
+
+  * JIRA:(('tag:xx-small:https://issues.apache.org/jira/browse/ARROW/'))
+    * コミットはすべてチケットに紐づく
+    * こういうのやりたいねー！も\n
+      チケットになる
+  * メーリングリスト:(('tag:xx-small:dev@arrow.apache.org'))\n
+    (('note:dev-subscribe@arrow.apache.orgにメールを送ればOK'))
+    * 基本的にここでディスカッション
+    * JIRAの新規チケットも流れる
+
+= Apache Arrowの開発に参加
+
+  * バグレポート
+    * JIRAにチケット作成
+  * バグ修正・機能追加
+    * JIRAにチケット作成→GitHubでPR\n
+      (('note:Pull Requestタイトルにルールあり（後述）'))
+  * 相談
+    * メーリングリスト
+
+= PRのタイトル
+
+  フォーマット：
+  ARROW-XXX: [YYY] ...
+  例：
+  ARROW-897: [GLib] Extract ...
+
+  ARROW-XXX: JIRAのissue ID
+  [YYY]: モジュール名
+
+= モジュール
+
+  * Java: Java実装
+  * C++: C++実装
+  * GLib: C++実装のCラッパー\n
+    (('note:（各種言語バインディング向け）'))
+    * GLibを使用
+  * JS: JavaScript実装
+    * TypeScriptを使用
+
+= WANTED: モジュール
+
+(('tag:center'))
+↓は未着手なはずなので\n
+ここから開発に参加もあり
+
+  * R: C++実装のR(('note:cpp'))ラッパー
+  * Go: Go実装
+    * すでにGLib経由で使えるけど\n
+      ネイティブ実装の方がいいかも？
+  * Rust: Rust実装
+
+= Apache Arrow関連の開発
+
+  * 大量のデータ交換が必要な\n
+    プロダクトをArrowに対応させる
+    * 例：Apache Spark\n
+      (('note:（PySparkはすでに進んでいる：SPARK-13534）'))
+  * 参考：対応済みプロダクト
+    * Groonga: http://groonga.org/
+    * Ray: (('tag:x-small:https://github.com/ray-project/ray'))
+
+= Red Data Tools
+
+(('tag:center'))
+(('tag:small'))
+https://red-data-tools.github.io/
+
+  * Ruby用データ分析ツールを\n
+    揃えよう！プロジェクト
+    * Apache Arrowベース
+  * ただし！できるだけRuby以外でも使えるようにしたい！
+
+= Ruby以外でも使える？
+
+  * GLibバインディングとして開発\n
+    (('note:（Ruby専用バインディングとして開発しない）'))
+    * Luaとかでも使えるようになる
+    * 例：parquet-glib\n
+      (('tag:xx-small:https://github.com/red-data-tools/parquet-glib'))
+    * 例：xtensor-glib\n
+      (('tag:xx-small:https://github.com/red-data-tools/xtensor-glib'))
+
+= Ruby以外でも使える？
+
+  * データも似たような感じで
+    * どうすればいろんな言語から\n
+      使いやすくなるかは要検討
+
+= 開発に参加しよう！
+
+  * Apache Arrow
+    * dev@arrow.apache.org
+  * Red Data Tools
+    * https://gitter.im/red-data-tools
+  * Arrowが嬉しそうなプロダクト
